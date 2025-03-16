@@ -190,3 +190,47 @@ git push origin main            # Push updated main to remote
 
 ************************
 
+### **Git Merge Conflict (Theory)**  
+
+A **merge conflict** occurs when Git is unable to automatically merge changes from two branches because the same part of a file has been modified differently in both branches.  
+
+#### **Causes of Merge Conflicts**  
+1. Two people change the same line in a file on different branches.  
+2. A file is deleted in one branch but modified in another.  
+3. Conflicting changes exist in multiple commits.  
+
+#### **How to Resolve a Merge Conflict?**  
+1. **Identify conflicts** using `git status`.  
+2. **Manually edit the conflicted files** to remove merge markers (`<<<<<<<`, `=======`, `>>>>>>>`).  
+3. **Stage the resolved files** using `git add filename`.  
+4. **Commit the merge** with `git commit -m "Resolved merge conflict"`.  
+5. **Push the changes** to update the remote repository.  
+
+✅ **Merge conflicts require manual resolution because Git doesn’t know which changes to keep.** 🚀
+
+### merge conflict done by me :
+git branch (main : here i done some changes in same line)
+git status (it will show modifined files in red color)
+git add .
+git status (it will show modifined files in green color)
+git commit -m "added main branch"
+git checkout feature2 (here i changed the branch and done some changes on the same line i have done in main)
+git status (it will show modifined files in red color)
+git add .
+git commit -m "added feature2"
+git diff main (it will ceck diff between main and feature2)
+git merge main (it will merge main into feature2)
+git status
+(it will show you which change you want the you have to select any one )
+git add .
+git commit -m "resolve merge conflict"
+git push origin feature2
+git checkout main (switch to main)
+git diff feature2
+git merge feature2
+git status
+git push
+
+
+
+
