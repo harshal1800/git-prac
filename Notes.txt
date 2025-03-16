@@ -92,3 +92,21 @@ The git log : command shows the history of commits in your repository.
 
 U : Untracked file
 M : Modified file
+
+***************
+```sh
+# Undo last commit but keep changes staged
+git reset --soft HEAD~1  
+
+# Undo last commit and unstage changes (default)
+git reset HEAD~1  
+
+# Undo last commit and delete all changes permanently (⚠ irreversible)
+git reset --hard HEAD~1  
+
+# Unstage changes (after `git add .`)
+git reset HEAD  
+```
+
+***************************
+
