@@ -167,3 +167,26 @@ git branch -D branch-name  # Force delete (even if not merged)
 
 ******************
 
+git branch                    # List branches
+git checkout -b feature1       # Create and switch to 'feature1'
+git branch                     # Check branches
+git checkout main              # Switch back to main
+git branch                     # Check branches
+git checkout -b feature2       # Create and switch to 'feature2'
+
+# (Make changes in feature2)
+git branch                     # Check branches
+git status                      # Check changes
+git add .                       # Stage changes
+git commit -m "Your commit message"  # Commit changes
+git push origin feature2        # Push 'feature2' to remote
+
+git checkout main               # Switch back to main
+git branch                      # Check branches
+
+# ✅ Correct way to merge
+git merge feature2              # Merge 'feature2' into 'main'
+git push origin main            # Push updated main to remote
+
+************************
+
