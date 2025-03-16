@@ -1,0 +1,94 @@
+### **Git & GitHub: Simple Guide**  
+
+#### **What is Git?**  
+Git is a version control system that tracks changes in code, helping developers collaborate and manage projects efficiently.  
+
+#### **What is GitHub?**  
+GitHub is a cloud-based platform that hosts Git repositories, enabling collaboration, version control, and project management.  
+
+---
+
+### **Key Git Concepts:**  
+- **Repository (Repo):** A storage for code and its history.  
+- **Commit:** Saving changes in Git.  
+- **Push:** Sending local commits to GitHub.  
+- **Pull:** Fetching updates from GitHub to your local system.  
+- **Branch:** A separate version of the project for new changes.  
+- **Merge:** Combining branches.  
+- **Clone:** Copying a repository from GitHub to your local system.  
+- **Fork:** Creating a copy of someone’s repo in your GitHub account.  
+- **Staging Area:** A space where changes are prepared before committing.  
+- **Remote Repository:** A Git repository stored on a server (like GitHub).  
+- **Fetch:** Downloading changes from a remote repo without merging.  
+- **Rebase:** Moving or combining commits in a different branch.  
+- **Reset:** Undo changes by moving back to a previous commit.  
+- **Cherry-Pick:** Applying specific commits from one branch to another.  
+- **Gitignore:** A file that tells Git which files to ignore (e.g., logs, env files). 
+- **ls :	Lists all visible files and directories in the current folder.
+- **ls -a:	Lists all files, including hidden ones (files starting with . like .git). 
+
+---
+
+### **Key GitHub Features:**  
+- **Issues:** Used to track bugs or feature requests.  
+- **Pull Requests (PR):** A way to propose changes before merging them.  
+- **Actions:** Automate workflows, like testing or deployment.  
+- **Wiki:** Documentation space inside a GitHub repository.  
+- **Projects:** A Kanban-style board for task management.  
+
+*************************
+
+Run the following commands to configure Git with your local Machine:  
+
+git config --global user.name "harshal1800"
+git config --global user.email "harshalchavhank18@gmail.com"
+
+
+To verify the configuration, run:  
+git config --global --list
+
+
+********************
+
+# Git Workflow
+
+# 1. Whatever changes we make go to the staging area
+git add .
+
+# 2. After that, we commit those changes (save them locally)
+git commit -m "Your commit message"
+
+# 3. Then, we push those changes to our remote repository (GitHub)
+git push origin main  # Use 'main' or 'master' depending on your branch
+
+********************
+
+# 1. Check the status of your repository
+git status  
+
+# 2. Stage changes (move files to the staging area)
+git add .  # Stages all changes
+# OR
+git add filename  # Stages a specific file
+
+# 3. Commit changes (save them locally)
+git commit -m "Your commit message"
+
+# 4. Push changes to the remote repository (GitHub)
+git push origin main  # Use 'main' or 'master' depending on your branch
+
+# 5. Pull latest changes from remote (if needed)
+git pull origin main  # Sync your local repo with GitHub
+
+# 6. Clone a repository (if you haven't already)
+git clone https://github.com/your-username/repository-name.git
+
+# 7. View Git history
+git log  # Shows commit history
+
+************************
+
+The git log : command shows the history of commits in your repository.
+
+U : Untracked file
+M : Modified file
