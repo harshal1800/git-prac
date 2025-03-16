@@ -15,6 +15,8 @@ GitHub is a cloud-based platform that hosts Git repositories, enabling collabora
 - **Pull:** Fetching updates from GitHub to your local system.  
 - **Branch:** A separate version of the project for new changes.  
 - **Merge:** Combining branches.  
+- **git checkout -b :** command is used to create and switch to a new branch in one step.
+- **git checkout branch-name :** command is used to switch to an existing branch in Git.
 - **Clone:** Copying a repository from GitHub to your local system.  
 - **Fork:** Creating a copy of someone’s repo in your GitHub account.  
 - **Staging Area:** A space where changes are prepared before committing.  
@@ -109,4 +111,59 @@ git reset HEAD
 ```
 
 ***************************
+
+### **Add a Local Project to a Remote GitHub Repository**  
+
+Follow these steps to push your local project to GitHub:  
+
+```sh
+# 1. Navigate to your project folder
+cd your-project-folder  
+
+# 2. Initialize Git (if not already initialized)
+git init  
+
+# 3. Add all files to the staging area
+git add .  
+
+# 4. Commit the changes
+git commit -m "Initial commit"  
+
+# 5. Add the remote repository (replace with your repo URL)
+git remote add origin https://github.com/your-username/your-repo.git  
+
+# 6. Push the project to GitHub
+git push -u origin main  # Use 'main' or 'master' depending on your branch
+```
+
+***************************
+
+### **Branching and Merging in Git**  
+
+#### **1️⃣ Create a New Branch (Branching)**  
+```sh
+git branch branch-name   # Create a new branch
+git checkout branch-name # Switch to the new branch
+# OR (shortcut)
+git checkout -b branch-name
+```
+
+#### **2️⃣ View All Branches**  
+```sh
+git branch
+```
+
+#### **3️⃣ Merge a Branch into `main` (Merging)**  
+```sh
+git checkout main       # Switch to main branch
+git merge branch-name   # Merge the branch into main
+```
+
+#### **4️⃣ Delete a Branch**  
+```sh
+git branch -d branch-name  # Delete the branch (if merged)
+git branch -D branch-name  # Force delete (even if not merged)
+```
+
+******************
 
