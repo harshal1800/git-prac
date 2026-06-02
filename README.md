@@ -1,3 +1,3 @@
 # git-prac
-we are larning git
-Name : harshal
+# we are larning git :
+# Name : Harshal Chavhan
