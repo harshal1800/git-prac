@@ -298,4 +298,81 @@ git branch  # Check available branches
 git checkout <branch_name>  # Switch to a specific branch (if needed)
 git status  # Check the status of the repository
 
+*************************
 
+This is the workflow I follow when working on a feature branch and merging it back to main:
+
+```bash
+# 1. Go to main branch
+git checkout main
+
+# 2. Get latest code from GitHub
+git pull origin main
+
+# 3. Create and switch to a feature branch
+git checkout -b feature/login-page
+
+# 4. Make code changes
+
+# 5. Check changed files
+git status
+
+# 6. Stage changes
+git add .
+
+# 7. Commit changes
+git commit -m "Added login page"
+
+# 8. Push feature branch to GitHub
+git push -u origin feature/login-page
+```
+
+### GitHub Steps
+
+```text
+1. Open GitHub repository
+2. Click Compare & Pull Request
+3. Add title and description
+4. Click Create Pull Request
+5. Review/Approve PR
+6. Click Merge Pull Request
+7. Click Confirm Merge
+8. Click Delete Branch
+```
+
+### After PR is Merged and Branch is Deleted on GitHub
+
+```bash
+# 9. Switch to main
+git checkout main
+
+# 10. Get merged changes from GitHub
+git pull origin main
+
+# 11. Delete local feature branch
+git branch -d feature/login-page
+```
+
+### Complete Flow (Commands Only)
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/login-page
+
+git status
+git add .
+git commit -m "Added login page"
+git push -u origin feature/login-page
+
+# Create PR on GitHub
+# Merge PR on GitHub
+# Delete Branch on GitHub
+
+git checkout main
+git pull origin main
+git branch -d feature/login-page
+```
+
+This is the standard Git workflow used in most teams:
+**Main → Feature Branch → Commit → Push → Pull Request → Merge → Delete Branch → Back to Main**. 🚀
